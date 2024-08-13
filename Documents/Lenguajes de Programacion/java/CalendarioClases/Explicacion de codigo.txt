@@ -1,0 +1,86 @@
+La linea 'public static void main(String[] args)' define el metodo principal que se ejecuta al iniciar
+el programa en java
+
+1. public: Es un modificador de acceso que indica que el método es accesible desde cualquier otra clase.
+   Esto es necesario porque el método 'main' debe poder ser invocado por la máquina virtual de Java (JVM)
+   desde fuera de la clase.
+
+2. static: Significa que el método pertenece a la clase en sí, y no a una instancia específica de la clase.
+   Esto permite que el método 'main' sea invocado sin necesidad de crear un objeto de la clase.
+   Como el método 'main' es el punto de entrada del programa, es necesario que sea estático para que pueda
+   ser ejecutado automáticamente al iniciar el programa.
+
+3. void: Indica que el método no devuelve ningún valor. El método 'main' solo ejecuta el código dentro de su cuerpo
+   y no necesita devolver ningún resultado.
+
+4. main: Es el nombre del método. En Java, 'main' es un nombre especial reservado para el punto de entrada del programa.
+   La JVM busca este método cuando se ejecuta un programa Java.
+
+5. String[] args: Es un parámetro que el método recibe. String[] es un array de objetos String.
+   args es el nombre de la variable que representa este array. Este array puede contener los argumentos
+   que se pasan al programa desde la línea de comandos al momento de su ejecución. Por ejemplo, si ejecutas un programa
+   con java MiPrograma argumento1 argumento2, esos argumentos se almacenarán en args[0] y args[1] respectivamente.
+
+Resumen
+
+Es 'public' para que sea accesible por la JVM, 'static' para que se pueda llamar sin crear una instancia de la clase,
+'void' porque no devuelve un valor, y 'String[] args' para recibir cualquier argumento de la línea de comandos.
+**************************************************************************************************************************
+La línea 'Scanner scanner = new Scanner(System.in);' se utiliza en Java para crear un objeto Scanner que permite leer entradas
+de texto desde la consola (teclado).
+
+1. Scanner: Es una clase en Java que se encuentra en el paquete 'java.util'. La clase 'Scanner' se utiliza para leer la entrada
+   de varios tipos de datos, como enteros, cadenas de texto, etc., desde diversas fuentes, como la consola, archivos, o incluso
+   cadenas de texto.
+
+2. scanner: Es el nombre de la variable que estamos declarando. Esta variable será de tipo 'Scanner' y se usará para referirnos
+   al objeto 'Scanner' que estamos creando. Puedes pensar en esta variable como un controlador que usamos para interactuar
+   con el objeto Scanner.
+
+3. = new: = es el operador de asignación que asigna el nuevo objeto 'Scanner' a la variable 'scanner'. 'new' es una palabra clave
+   en Java que se utiliza para crear nuevas instancias de objetos. En este caso, estamos creando una nueva instancia de la clase Scanner
+
+4. Scanner(System.in): Aquí estamos llamando al constructor de la clase 'Scanner'. El argumento 'System.in' es un flujo de entrada
+   que representa la entrada estándar del sistema, es decir, el teclado. Al pasar 'System.in' al constructor de 'Scanner', le estamos diciendo 
+   que queremos leer la entrada del usuario desde la consola.
+
+Resumen
+
+Scanner scanner: Declara una variable 'scanner' de tipo 'Scanner'.
+new Scanner(System.in): Crea un nuevo objeto 'Scanner' que leerá los datos ingresados por el usuario desde la consola.
+'scanner' es ahora un objeto que puede utilizarse para leer diferentes tipos de datos desde el teclado.
+Por ejemplo, podrías usar scanner.nextLine() para leer una línea de texto introducida por el usuario.
+******************************************************************************************************************************
+
+Este bloque de código se utiliza para inicializar el array bidimensional horario, estableciendo cada posición con el valor "Vacío".
+Vamos a desglosar el proceso paso a paso:
+
+for (int i = 0; i < 5; i++);
+- Este es el primer bucle 'for', también llamado "bucle exterior".
+- int i = 0;: Inicializa la variable i en 0. i es el índice que se utiliza para recorrer las filas del array horario.
+- i < 5;: La condición para que el bucle continúe es que i sea menor que 5. Esto se debe a que el array horario
+  tiene 5 filas (cada fila representa un día de la semana, de lunes a viernes).
+- i++: Después de cada iteración del bucle, i se incrementa en 1.
+
+for (int j = 0; j < 6; j++);
+- Este es el segundo bucle for, conocido como "bucle interior". Está anidado dentro del bucle exterior.
+- int j = 0;: Inicializa la variable j en 0. j es el índice que se utiliza para recorrer las columnas del array horario.
+- j < 6;: La condición para que este bucle continúe es que j sea menor que 6. Esto se debe a que el array horario tiene 6 columnas
+  (cada columna representa una hora en el día).
+- j++: Después de cada iteración del bucle interior, j se incrementa en 1.
+
+horario[i][j] = "Vacío";:
+- Dentro del bucle interior, esta línea de código establece el valor de la posición [i][j] del array horario como "Vacío".
+- horario[i][j]: Se refiere a una celda específica en el array bidimensional. i determina la fila y j determina la columna.
+- = "Vacío";: Asigna el valor "Vacío" a esa celda.
+**********************************************************************************************************************************
+int a = scan.nextInt();
+- int a:
+  * declara una variable 'a' de tipo 'int'. En Java, 'int' es un tipo de dato primitivo que almacena números enteros,
+    es decir, sin decimales.
+
+- scan.nextInt():
+  * 'scan' es un objeto de la clase Scanner, que se utiliza para leer la entrada del usuario desde la consola.
+  * nextInt() es un método de la clase Scanner que lee el siguiente valor ingresado por el usuario.
+  * Este método espera que el usuario introduzca un valor y presione Enter. Luego, ese valor se almacena en la variable a.
+  
